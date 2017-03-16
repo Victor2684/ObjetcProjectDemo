@@ -7,12 +7,13 @@ package objetcprojectdemo;
 
 /**
  *
- * @author MANUEL
+ * @author victor
  */
 public class ObjetcProjectDemo {
 
     /**
-     * @param args the command line arguments
+     * Invocamos la clase Staff y añadimos los valores
+     * @param args 
      */
     public static void main(String[] args) {
         Staff staff1 = new Staff("-Peter");
@@ -34,7 +35,7 @@ public class ObjetcProjectDemo {
         
         
 
-        // TODO code application logic here
+   
     }
     
 }
