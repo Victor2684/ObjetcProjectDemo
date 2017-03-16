@@ -10,15 +10,15 @@ package objetcprojectdemo;
  *
  * @author Victor
  */
-public class Staff {
+public class Empleado {
 /**
  * Declaramos las variables que contendra y dará funcionalidad a nuestra clase.
  */
-    private String NameOfStaff;
-    private final int hourlyRate = 30;
-    private int hoursWorked;
+    private String empleado;
+    private final int tarifaporhora = 30;
+    private int horasTrabajas;
  /* Metodo que visualiza el mensaje "Calculando el salario..."*/   
-    public void printMessage()
+    public void imprimirMensaje()
     { 
         System.out.println("Calculando el salario...");
     }
@@ -26,12 +26,12 @@ public class Staff {
      *  Este metodo calculará el salario cuando no hay bonus 
      * @return staffPay
      */
-    public int calculatePay()
+    public int calcularPago()
     {
-        printMessage();
+        imprimirMensaje();
         int staffPay;
-        staffPay = hourlyRate * hoursWorked;
-        if (hoursWorked > 0)
+        staffPay = tarifaporhora * horasTrabajas;
+        if (horasTrabajas > 0)
             return staffPay;
         else
             return -1;
@@ -39,15 +39,15 @@ public class Staff {
     /**
      *  Método que calcula es salario cuando hay bonus
      * @param bonus
-     * @param allowance
+     * @param tolerancia
      * @return Devuelve las horas trabajas multiplado por la tarias mas 
      * los bonus y mas la tolerancia
      */
-    public int calculatePay(int bonus, int allowance)
+    public int CalcularelPago(int bonus, int tolerancia)
     {
-        printMessage();
-        if (hoursWorked>0)
-            return hoursWorked * hourlyRate + bonus + allowance;
+        imprimirMensaje();
+        if (horasTrabajas>0)
+            return horasTrabajas * tarifaporhora + bonus + tolerancia;
         else
             return 0;
     }
@@ -55,10 +55,10 @@ public class Staff {
     * Método que verifica que horas trabajadas es mayor que cero
     * @param hours 
     */
-    public void setHoursWorked(int hours)
+    public void insertarHorasTrabajas(int horas)
     {
-        if (hours > 0)
-            hoursWorked = hours;
+        if (horas > 0)
+            horasTrabajas = horas;
         else {
             System.out.println("-Error: HoursWorked Cannot be Smaller than zero");
             System.out.println("-Error: HoursWorked is not updated");
@@ -68,23 +68,23 @@ public class Staff {
      * Método getter para asignar valores a horas trabajadas 
      * @return las horas trabajdas
      */
-    public int getHoursWorked()
+    public int asignarHoursWorked()
     {
-        return hoursWorked;
+        return horasTrabajas;
     }
 /**
  * Constructores crean  objetos trabajadores
  * @param name 
  */
-    public Staff(String name)
+    public Empleado(String nombre)
     {
-        String nameOfStaff = name;
+        String nameOfStaff = nombre;
         System.out.println("\n"+ nameOfStaff);
         System.out.println("-------------------------");
     }
-    public Staff(String firstName, String lastName)
+    public Empleado(String primerNombre, String segundoNombre)
     {
-        String nameOfStaff = firstName + lastName;
+        String nameOfStaff = primerNombre + segundoNombre;
         System.out.println("\n"+nameOfStaff);
         System.out.println("-------------------------------");
     }
